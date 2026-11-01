@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 230" width="1100" height="230" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="1100" height="230" rx="18" fill="#0f172a"/>
+  <text x="550" y="32" fill="#e2e8f0" font-size="18" font-weight="700" text-anchor="middle">Live speed profile — drop items and watch the car react</text>
+  <line x1="60" y1="190" x2="1050" y2="190" stroke="#334155"/><line x1="60" y1="50" x2="60" y2="190" stroke="#334155"/>
+  <g fill="#64748b" font-size="11"><text x="30" y="58">80</text><text x="30" y="124">40</text><text x="38" y="194">0</text><text x="1000" y="212">time →</text></g>
+  <path id="p" d="M60 58 L220 58 C 260 58, 280 160, 330 184 L 430 184 L 470 184 C 520 184, 540 58, 600 58 L 700 58 C 740 58, 760 140, 800 140 L 900 140 C 940 140, 960 58, 1040 58"
+        fill="none" stroke="#3b82f6" stroke-width="3" stroke-dasharray="1400" stroke-dashoffset="1400"><animate attributeName="stroke-dashoffset" values="1400;0;0" keyTimes="0;.8;1" dur="8s" repeatCount="indefinite"/></path>
+  <g font-size="11" font-weight="700" text-anchor="middle">
+    <text x="300" y="150" fill="#ef4444">STOP sign</text><text x="450" y="176" fill="#94a3b8" font-weight="400">hold 2.2s</text>
+    <text x="780" y="128" fill="#f59e0b">Speed 30 / Zebra</text>
+  </g>
+  <circle r="6" fill="#fff"><animateMotion dur="8s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.8;1" calcMode="linear"><mpath href="#p"/></animateMotion></circle>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 420" width="1100" height="420" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0 L10 4 L0 8z" fill="#60a5fa"/></marker>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#111c33"/></linearGradient>
+  </defs>
+  <rect width="1100" height="420" rx="18" fill="url(#bg)"/>
+  <text x="550" y="38" fill="#e2e8f0" font-size="20" font-weight="700" text-anchor="middle">System Architecture</text>
+
+  <!-- boxes -->
+  <g font-size="14" fill="#e2e8f0" text-anchor="middle">
+    <rect x="40" y="90" width="190" height="90" rx="14" fill="#1e293b" stroke="#3b82f6"/><text x="135" y="125" font-weight="700">Sidebar</text><text x="135" y="147" fill="#94a3b8" font-size="12">8 draggable objects</text>
+    <rect x="40" y="250" width="190" height="90" rx="14" fill="#1e293b" stroke="#a855f7"/><text x="135" y="285" font-weight="700">User Input</text><text x="135" y="307" fill="#94a3b8" font-size="12">drag · move · rotate · N/1/2/3</text>
+
+    <rect x="330" y="150" width="240" height="140" rx="16" fill="#172554" stroke="#60a5fa" stroke-width="2"/>
+    <text x="450" y="185" font-weight="800" font-size="16">Three.js City Engine</text>
+    <text x="450" y="210" fill="#93c5fd" font-size="12">Road · Buildings · Trees · Lamps</text>
+    <text x="450" y="230" fill="#93c5fd" font-size="12">Day / Night · Shadows · Headlights</text>
+    <text x="450" y="250" fill="#93c5fd" font-size="12">Ego car + Ambient traffic</text>
+    <text x="450" y="270" fill="#93c5fd" font-size="12">Reaction engine (AI rules)</text>
+
+    <rect x="670" y="70" width="190" height="90" rx="14" fill="#1e293b" stroke="#22c55e"/><text x="765" y="105" font-weight="700">FastAPI</text><text x="765" y="127" fill="#94a3b8" font-size="12">/api/process-object</text>
+    <rect x="670" y="260" width="190" height="90" rx="14" fill="#1e293b" stroke="#f59e0b"/><text x="765" y="295" font-weight="700">OpenCV Pipeline</text><text x="765" y="317" fill="#94a3b8" font-size="12">CLAHE → Mask → Isolate</text>
+
+    <rect x="920" y="150" width="140" height="140" rx="14" fill="#1e293b" stroke="#ef4444"/><text x="990" y="205" font-weight="700">HUD</text><text x="990" y="228" fill="#94a3b8" font-size="12">Speedometer</text><text x="990" y="246" fill="#94a3b8" font-size="12">2x2 Matrix</text><text x="990" y="264" fill="#94a3b8" font-size="12">Reaction badge</text>
+  </g>
+
+  <!-- flows -->
+  <g fill="none" stroke="#60a5fa" stroke-width="2.5" stroke-dasharray="8 8" marker-end="url(#ar)">
+    <animate attributeName="stroke-dashoffset" from="0" to="-32" dur="1s" repeatCount="indefinite"/>
+    <path d="M230 135 C 280 135, 280 190, 330 190"/>
+    <path d="M230 295 C 280 295, 280 250, 330 250"/>
+    <path d="M570 190 C 620 190, 620 115, 670 115"/>
+    <path d="M670 135 C 620 135, 620 200, 570 200" stroke="#22c55e"/>
+    <path d="M570 255 C 620 255, 620 305, 670 305"/>
+    <path d="M860 305 C 900 305, 900 250, 920 250" stroke="#f59e0b"/>
+    <path d="M570 220 L 920 220" stroke="#ef4444"/>
+  </g>
+  <!-- moving packets -->
+  <g fill="#fff">
+    <circle r="5"><animateMotion dur="2.4s" repeatCount="indefinite" path="M230 135 C 280 135, 280 190, 330 190 L 570 190 C 620 190, 620 115, 670 115"/></circle>
+    <circle r="5" fill="#f59e0b"><animateMotion dur="2.8s" repeatCount="indefinite" path="M570 255 C 620 255, 620 305, 670 305 L 860 305 C 900 305, 900 250, 920 250"/></circle>
+    <circle r="5" fill="#ef4444"><animateMotion dur="2s" repeatCount="indefinite" path="M570 220 L 920 220"/></circle>
+  </g>
+  <text x="550" y="395" fill="#64748b" font-size="12" text-anchor="middle">Frontend works standalone (JS fallback) — Python backend is optional and auto-detected</text>
+</svg>
